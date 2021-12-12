@@ -12,8 +12,20 @@ function menorMayor(numeros) {
   // y 15 es el número más grande (mayor) dentro del arreglo [4, 6, 1, 7, 15]
 
   // Tu código aca:
-  console.log("prueba")
-
+  let newArray = [];
+  let numMayor = numeros[0];
+  let numMenor = numeros[0];
+  for(let i = 0; i < numeros.length; i++){
+      if(numMenor > numeros[i]){
+        numMenor = numeros[i];
+      }
+      if(numMayor < numeros[i]){
+        numMayor = numeros[i]
+      }
+  }
+    newArray.push(numMenor);
+    newArray.push(numMayor)
+  return newArray
 }
 
 function cuantosOnline(usuarios) {
@@ -43,7 +55,13 @@ function cuantosOnline(usuarios) {
   // Tip: Podes usar el metodo for...in
 
   // Tu código aca:
-
+  let cont = 0;
+  for(let index in  usuarios){
+    if(usuarios[index].online == true){
+      cont++
+    }
+  }
+  return cont;
 }
 
 function divisores(numero) {
@@ -56,6 +74,18 @@ function divisores(numero) {
   // divisores(11) devuelve 'Es primo'
 
    // Tu código aca:
+   let newArray = [];
+   
+   for(let i = 2; i < numero; i++){
+     if(numero % i === 0){
+       newArray.push(i);
+     } 
+    }
+    if(newArray.length === 0){
+      return "Es primo";
+    }
+     return newArray;
+
 
 }
 
